@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>students</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let student of students">
+    <ion-card-header>
+      <ion-card-subtitle >Name:{{ student.name }}</ion-card-subtitle>
+      <ion-card-title>Email:{{ student.email }}</ion-card-title>
+
+      <ion-card-subtitle [ngStyle]="{'background-color':student.country === 'TN' ? 'green' : 'yellow' }">Country:{{ student.country }}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
